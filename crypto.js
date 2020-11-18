@@ -3,7 +3,7 @@ const { encode58, decode58 } = require('./base58')
 
 const sha256 = (msg) => crypto.createHash('sha256').update(Buffer.from(msg, 'hex')).digest('hex')
 
-const getBase58CheckAddress = (hex) => {
+const fromHex = (hex) => {
   const doubleSha256 = sha256(sha256(hex));
   const checkSum = doubleSha256.substr(0, 8)
   const address = Buffer.from(hex + checkSum, 'hex')
@@ -11,7 +11,7 @@ const getBase58CheckAddress = (hex) => {
   return encode58(address);
 }
 
-const decodeBase58Address = (base58Sting) => {
+const toHex = (base58Sting) => {
   if (typeof (base58Sting) !== 'string') return false;
   if (base58Sting.length <= 4) return false;
 
@@ -27,4 +27,4 @@ const decodeBase58Address = (base58Sting) => {
   throw new Error('Invalid address provided');
 }
 
-module.exports = { getBase58CheckAddress, decodeBase58Address }
+module.exports = { fromHex, toHex }
