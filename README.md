@@ -1,6 +1,6 @@
 # Tron Format Address
 
-Tron utility to convert address from hex to base58 and vice versa
+Tron utility to convert address from hex to base58 and vice versa. The package is based on the source code of [TronWeb](https://github.com/TRON-US/tronweb)
 
 ## Installation
 
