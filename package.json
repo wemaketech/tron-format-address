@@ -1,21 +1,32 @@
 {
   "name": "tron-format-address",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Tron utility to convert address from hex to base58 and vice versa",
+  "main": "build/lib/crypto.js",
+  "types": "build/lib/crypto.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx mocha -r ts-node/register 'test/**/*.ts'",
+    "build": "npx tsc",
+    "lint": "npx eslint 'lib/**/*.{ts,tsx}'",
+    "lint:fix": "npx eslint 'lib/**/*.{ts,tsx}' --fix",
+    "format": "prettier --write \"**/*.ts\""
   },
   "keywords": [],
   "author": "Misha Kushka <kushkamisha@yahoo.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.0.4",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
     "chai": "^4.2.0",
     "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "mocha": "^8.2.1",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
   },
-  "dependencies": {
-    "ethers": "^5.0.19"
-  }
+  "dependencies": {}
 }
