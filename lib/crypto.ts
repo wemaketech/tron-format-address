@@ -4,9 +4,10 @@ import { encode58, decode58 } from './base58'
 const sha256 = (msg: string) => crypto.createHash('sha256').update(Buffer.from(msg, 'hex')).digest('hex')
 
 export const fromHex = (hex: string): string => {
-  const doubleSha256 = sha256(sha256(hex))
+  const addr = `41${hex.substr(2)}`
+  const doubleSha256 = sha256(sha256(addr))
   const checkSum = doubleSha256.substr(0, 8)
-  const address = Buffer.from(hex + checkSum, 'hex')
+  const address = Buffer.from(addr + checkSum, 'hex')
 
   return encode58(address)
 }
@@ -21,7 +22,7 @@ export const toHex = (base58Sting: string): string => {
 
   const checkSum1 = sha256(sha256(address)).substr(0, 8)
 
-  if (`${checkSum}` === `${checkSum1}`) return address
+  if (`${checkSum}` === `${checkSum1}`) return `0x${address.substr(2)}`
 
   throw new Error('Invalid address provided')
 }
