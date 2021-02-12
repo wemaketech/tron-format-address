@@ -1,6 +1,6 @@
 {
   "name": "tron-format-address",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Tron utility to convert address from hex to base58 and vice versa",
   "main": "build/lib/crypto.js",
   "types": "build/lib/crypto.d.ts",
