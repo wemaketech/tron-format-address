@@ -1,6 +1,6 @@
 {
   "name": "tron-format-address",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Tron utility to convert address from hex to base58 and vice versa",
   "main": "build/lib/crypto.js",
   "types": "build/lib/crypto.d.ts",
@@ -9,7 +9,7 @@
     "build": "npx tsc",
     "lint": "npx eslint 'lib/**/*.{ts,tsx}'",
     "lint:fix": "npx eslint 'lib/**/*.{ts,tsx}' --fix",
-    "format": "prettier --write \"**/*.ts\""
+    "format": "npx prettier --write \"**/*.ts\""
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   "devDependencies": {
     "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.0",
+    "@types/node": "^18.14.6",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
     "@typescript-eslint/parser": "^4.15.0",
     "chai": "^4.3.0",

@@ -31,7 +31,7 @@ export const encode58 = (buffer: Buffer): string => {
 
   for (let i = 0; buffer[i] === 0 && i < buffer.length - 1; i++) digits.push(0)
 
-  return digits
+  return [...digits]
     .reverse()
     .map((digit) => ALPHABET[digit])
     .join('')
