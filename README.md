@@ -18,7 +18,7 @@ const addressBase58 = toHex(address)
 const addressHex = fromHex(addressBase58)
 console.log({ address, addressBase58, addressHex })
 console.log(address === addressHex)
-console.log(toHex('0x5473b5d0a72f9a044d581b7db17594301cf33d7c'))
+console.log(fromHex('0x5473b5d0a72f9a044d581b7db17594301cf33d7c'))
 ```
 
 ### TypeScript
@@ -31,5 +31,5 @@ const addressBase58 = toHex(address);
 const addressHex = fromHex(addressBase58);
 console.log({ address, addressBase58, addressHex });
 console.log(address === addressHex);
-console.log(toHex('0x5473b5d0a72f9a044d581b7db17594301cf33d7c'))
+console.log(fromHex('0x5473b5d0a72f9a044d581b7db17594301cf33d7c'))
 ```
