@@ -4,7 +4,7 @@ Tron utility to convert address from hex to base58 and vice versa. The package i
 
 ## Installation
 
-`$ npm i tron-format-address`
+`yarn add tron-format-address` or `npm i tron-format-address`
 
 ## Usage
 
