@@ -2,6 +2,9 @@
 
 Tron utility to convert address from hex to base58 and vice versa. The package is based on the source code of [TronWeb](https://github.com/TRON-US/tronweb)
 
+## Support ❤️
+Like what I do and want to support? You can always [buy me a coffee](https://buymeacoffee.com/mishakushka).
+
 ## Installation
 
 `yarn add tron-format-address` or `npm i tron-format-address`
