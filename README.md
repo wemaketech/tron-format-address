@@ -36,3 +36,17 @@ console.log({ address, addressBase58, addressHex });
 console.log(address === addressHex);
 console.log(fromHex('0x5473b5d0a72f9a044d581b7db17594301cf33d7c'))
 ```
+
+## Testing
+Want to run tests?
+1. Clone the original repo, then run
+```
+yarn
+```
+to install all dependencies.
+
+2. And now you can run
+```
+yarn test
+```
+to run all the tests.
